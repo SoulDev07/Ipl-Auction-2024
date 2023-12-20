@@ -1,0 +1,212 @@
+.calculator{
+    min-height: 92vh;
+    background-image: url(/public/media/pattern.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.calculator-container{
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+}
+.calculate{
+    display: flex;
+    align-items: center; 
+    gap: 1vw;
+    color: white;
+}
+.calculate span{
+    padding-left:1vw;
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+.points-container{
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    color: #040112;
+    border-radius: 40px;
+    font-weight: 700;
+    background-color: #D8FDF6;
+    height: 4vw;
+}
+.calculate button{
+    height: 4vw;
+    width: 10vw;
+    border-radius: 40px;
+    font-size: 1.7vw;
+    background-color: #D8FDF6;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+.player-type-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 12vw;
+}
+.player-type-buttons button{
+    width: 5vw;
+    height: 5vw;
+    background-color: #D8FDF6;
+    cursor: pointer;
+    border-radius: 100px;
+}
+.player-type-buttons button img{
+    width: 3vw;
+}
+.calculator-player-container{
+    display: flex;
+    padding: 0 1vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: nowrap;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+.calculator-type-player-container{
+    height: 18vw ;
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    gap: 1vw;
+    background-color: #D8FDF6;
+}
+.calculator-type-player-container::-webkit-scrollbar{
+    height: 3px;
+}
+.calculator-type-player-container p{
+    font-weight: 700;
+    padding: 1vw;
+    font-size: 1.5vw;
+}
+.cpcp{
+    color: white;
+    font-weight: 700;
+    font-size: 1.7vw;
+}
+.calculator-team-players-container{
+    display: flex;
+    flex-direction: column;
+}
+.scroll-buttons-container{
+    display: flex;
+    justify-content: space-between;
+}
+.scroll-buttons{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 1vw;
+}
+.scroll-buttons button{
+    cursor: pointer;
+    font-size: 1.5vw;
+    border: none;
+    background-color: #040112;
+    color: white;
+}
+.calculator-team-players-container div p{
+    font-size: 1.5vw;
+    color: white;
+    font-weight: 700;   
+}
+.calculator-individual-team-player-container{
+    display: flex;
+    padding: 1vw 0;
+    gap: 1vw;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.calculator-individual-team-player-container::-webkit-scrollbar{
+    height: 3px;    
+}
+.calculator-individual-team-player-container::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+.modifiedCard{
+    display: flex;
+    flex-direction: column;
+}
+.calculator-card-buttons-container{
+    width: 10vw;
+    height: 2vw;
+    border-radius: 0px 0px 30px 30px;
+    border: none;
+}
+.calculator-card-buttons{
+    width: calc(100%/3);
+    border: none;
+    cursor: pointer;
+    height: 100%;
+}
+.remove-button{
+    height: 2vw;
+    border: none;
+    border-radius: 0px 0px 30px 30px;
+    cursor: pointer;
+}
+.isbatButton{
+    cursor: pointer;
+    width: 1vw;
+}
+.container-title{
+    color: white;
+}
+@media only screen and (max-width: 1000px){
+    .calculator-container{
+        height: auto;
+        padding: 3vw;
+    }
+    .calculate{
+        width: 100%;
+        justify-content: space-around;
+    }
+    .calculate span{
+        font-size: 4vw;
+    }
+    .points-container{
+        height: 10vw;
+        width: 23vw;
+        font-size: 4vw;
+    }
+    .calculate button{
+        height: 10vw;
+        width: 20vw;
+        font-size: 4vw;
+    }
+    .calculator-type-player-container{
+        height: 42vw;
+    }
+    .calculator-type-player-container p{
+        font-size: 4vw;
+    }
+    .calculator-card-buttons{
+        font-size: 2.6vw;
+
+    }
+    .calculator-card-buttons-container{
+        width: 26vw;
+        height: 6vw;
+    }
+    .calculator-team-players-container div p{
+        font-size: 4vw;
+        padding: 2vw;
+    }
+    .remove-button{
+        font-size: 2.6vw;
+        height: 5vw;
+    }
+    .calculator-individual-team-player-container{
+        gap: 3vw;
+    }
+}
