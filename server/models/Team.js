@@ -1,41 +1,41 @@
-const mongoose = require("mongoose")
+import { Schema, model } from "mongoose";
 
-const teamSchema = new mongoose.Schema({
-    name:{
-        type:String,
-        required:[true,"Team name required"]
+const teamSchema = new Schema({
+    name: {
+        type: String,
+        required: [true, "Team name required"]
     },
-    slot:{
-        type:Number,
-        required:[true,"Slot required"]
+    slot: {
+        type: Number,
+        required: [true, "Slot required"]
     },
-    powercards:[
+    powercards: [
         {
-            name:{
-                type:String,
+            name: {
+                type: String,
             },
-            isUsed:{
-                type:Boolean
+            isUsed: {
+                type: Boolean
             }
         }
     ],
-    players:[
+    players: [
         {
-            type:mongoose.Schema.ObjectId,
-            ref:"Players"
+            type: Schema.ObjectId,
+            ref: "Players"
         }
     ],
-    budget:{
-        type:Number,
-        required:[true,"Invaild Team Budget"]
+    budget: {
+        type: Number,
+        required: [true, "Invaild Team Budget"]
     },
-    score:{
-        type:Number,
-        required:[true,"Team score required"]
+    score: {
+        type: Number,
+        required: [true, "Team score required"]
     },
-    teamImg:{
-        type:String
+    teamImg: {
+        type: String
     }
-})
+});
 
-module.exports = mongoose.model("Team",teamSchema)
+export default model("Team", teamSchema);
